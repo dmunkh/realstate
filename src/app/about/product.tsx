@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 
-export default function AboutPage() {
+export default function ProductPage() {
   const items = [
     {
       id: 1,
@@ -84,7 +84,7 @@ export default function AboutPage() {
             <p className="text-gray-600 mt-2">{item.description}</p>
             {/* Link to the product detail page */}
             <Link
-              href={`/about/product?id=${item.id}`}
+              href={`/about/product?id=1`}
               
               className="text-blue-500 mt-4 block hover:underline"
             >

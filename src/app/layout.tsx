@@ -59,7 +59,7 @@ export default function RootLayout({
                     </Link>
                   </li>
                   <li>
-                    <Link href="/about" className="menu-link text-gray-700 hover:text-blue-500">
+                    <Link href="/about/index.tsx" className="menu-link text-gray-700 hover:text-blue-500">
                       Орон сууц
                     </Link>
                   </li>
