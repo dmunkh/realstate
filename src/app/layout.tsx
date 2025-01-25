@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 
@@ -27,7 +28,69 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        {children}
+        {/* Header Section */}
+        <header className="bg-gray-100 shadow">
+          {/* Full-Width Background */}
+          <div className="w-full bg-gray-200">
+            {/* Centered Header Container */}
+            <div className="mx-auto max-w-[1200px] px-4 pt-3">
+              {/* Top bar */}
+              <div className="flex items-center justify-between">
+                {/* Left Section */}
+                <div className="text-lg font-bold text-gray-700">Real Estate</div>
+
+                {/* Right Login Button */}
+                <div>
+                  <Link
+                    href="/login"
+                    className="px-4 py-2 text-sm font-medium text-white bg-blue-500 rounded hover:bg-blue-600"
+                  >
+                    Login
+                  </Link>
+                </div>
+              </div>
+
+              {/* Navigation Menu */}
+              <nav className="menu mt-4">
+                <ul className="menu-list flex space-x-6">
+                  <li>
+                    <Link href="/" className="menu-link text-gray-700 hover:text-blue-500">
+                      Шинэ орон сууц
+                    </Link>
+                  </li>
+                  <li>
+                    <Link href="/about" className="menu-link text-gray-700 hover:text-blue-500">
+                      Орон сууц
+                    </Link>
+                  </li>
+                  <li>
+                    <Link href="/about" className="menu-link text-gray-700 hover:text-blue-500">
+                      Хашаа байшин
+                    </Link>
+                  </li>
+                  <li>
+                    <Link href="/about" className="menu-link text-gray-700 hover:text-blue-500">
+                      Газар
+                    </Link>
+                  </li>
+                  <li>
+                    <Link href="/about" className="menu-link text-gray-700 hover:text-blue-500">
+                      Үл хөдлөх
+                    </Link>
+                  </li>
+                  <li>
+                    <Link href="/contact" className="menu-link text-gray-700 hover:text-blue-500">
+                      Автомашин
+                    </Link>
+                  </li>
+                </ul>
+              </nav>
+            </div>
+          </div>
+        </header>
+
+        {/* Main Body */}
+        <main className="mx-auto max-w-[1200px] px-4">{children}</main>
       </body>
     </html>
   );

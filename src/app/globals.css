@@ -19,3 +19,29 @@ body {
   background: var(--background);
   font-family: Arial, Helvetica, sans-serif;
 }
+.menu {
+  background-color: #0070f3;
+  padding: 1rem;
+}
+
+.menu-list {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+}
+
+.menu-list li {
+  margin: 0 1rem;
+}
+
+.menu-link {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.menu-link:hover {
+  text-decoration: underline;
+}
