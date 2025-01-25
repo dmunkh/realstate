@@ -52,15 +52,17 @@ const ProductDetailPage = () => {
   const searchParams = useSearchParams(); // Get the search parameters (query params)
   const id = searchParams.get("id"); // Get the product id from the query params
 
-  // If no product id, return early
-  if (!id || !products[id]) {
+  // Default to product 1 if no valid id is found
+  const product = id && products[id] ? products[id] : null;
+
+  // If no product is found, return early with a message
+  if (!product) {
     return <div>Product not found!</div>;
   }
 
-  const item = products[id]; // Retrieve the product based on the id
-  
-  // Unconditionally call useState before any logic/return
-  const [selectedImage, setSelectedImage] = useState<string>(item.images[0]);
+  // eslint-disable-next-line react-hooks/rules-of-hooks
+  const [selectedImage, setSelectedImage] = useState<string>(product.images[0]);
+
 
   // Handler to change the selected image
   const handleImageClick = (image: string) => {
@@ -69,7 +71,7 @@ const ProductDetailPage = () => {
 
   return (
     <div className="max-w-[1200px] mx-auto px-4 py-8">
-      <h1 className="text-3xl font-bold mb-6">{item.title}</h1>
+      <h1 className="text-3xl font-bold mb-6">{product.title}</h1>
       
       {/* Flex container for image and details */}
       <div className="flex gap-8">
@@ -88,7 +90,7 @@ const ProductDetailPage = () => {
 
           {/* Thumbnail Image List */}
           <div className="flex gap-4 justify-center">
-            {item.images.map((image, index) => (
+            {product.images.map((image, index) => (
               <div
                 key={index}
                 className="cursor-pointer border-2 border-transparent hover:border-gray-300 rounded-md"
@@ -108,8 +110,8 @@ const ProductDetailPage = () => {
 
         {/* Right side - Product Details Section */}
         <div className="flex-1">
-          <p className="text-xl text-blue-600 font-semibold">{item.price}</p>
-          <p className="text-gray-700 mt-4">{item.description}</p>
+          <p className="text-xl text-blue-600 font-semibold">{product.price}</p>
+          <p className="text-gray-700 mt-4">{product.description}</p>
         </div>
       </div>
     </div>
