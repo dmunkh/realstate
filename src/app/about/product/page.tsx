@@ -14,18 +14,18 @@ type Product = {
 
 const products: { [key: string]: Product } = {
   "1": {
-    image: "/img/01JJ8YSQP6RZ96NFJAT6CCNSN8.webp",
+    image: "/img/tanan_01.jpg",
     title: "Item One",
     price: "$100",
     description: "This is a detailed description of item one.",
     images: [
-      "/img/01JJ8YSQP6RZ96NFJAT6CCNSN8.webp",
+      "/img/tanan_01.jpg",
       "/img/tanan_01.jpg",
       "/img/03JJ8YSQP6RZ96NFJAT6CCNSN8.webp"
     ]
   },
   "2": {
-    image: "/img/01JJ8YSQP6RZ96NFJAT6CCNSN8.webp",
+    image: "/img/tanan_01.jpg",
     title: "Item Two",
     price: "$200",
     description: "This is a detailed description of item two.",
@@ -36,7 +36,7 @@ const products: { [key: string]: Product } = {
     ]
   },
   "3": {
-    image: "/img/01JJ8YSQP6RZ96NFJAT6CCNSN8.webp",
+    image: "/img/tanan_01.jpg",
     title: "Item Three",
     price: "$300",
     description: "This is a detailed description of item three.",

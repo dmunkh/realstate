@@ -11,13 +11,13 @@ export default function ProductDetail() {
   // Define the product object with a numeric key signature
   const product: { [key: number]: { image: string; title: string; price: string; description: string } } = {
     1: {
-      image: "/img/01JJ8YSQP6RZ96NFJAT6CCNSN8.webp",
+      image: "/img/tanan_01.jpg",
       title: "Item One",
       price: "$100",
       description: "This is a detailed description of item one.",
     },
     2: {
-      image: "/img/01JJ8YSQP6RZ96NFJAT6CCNSN8.webp",
+      image: "/img/tanan_01.jpg",
       title: "Item Two",
       price: "$200",
       description: "This is a detailed description of item two.",
