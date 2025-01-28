@@ -49,6 +49,159 @@ export default function RootLayout({
                   </Link>
                 </div>
               </div>
+              <div className="flex overflow-x-auto space-x-4 p-4">
+
+  <div className="flex-shrink-0 w-24 p-1 border rounded-lg flex flex-col items-center">
+
+    <div className="mb-2">
+      <svg className="w-6 h-6 text-gray-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 5v14m7-7H5"></path>
+      </svg>
+    </div>
+   
+    <div className="text-center text-sm font-semibold text-gray-700">
+      Шинэ орон сууц
+    </div>
+  </div>
+
+
+  <div className="flex-shrink-0 w-24 p-1 border rounded-lg flex flex-col items-center">
+    <div className="mb-2">
+      <svg className="w-6 h-6 text-gray-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 5v14m7-7H5"></path>
+      </svg>
+    </div>
+    <div className="text-center text-sm font-semibold text-gray-700">
+      Item 2
+    </div>
+  </div>
+
+  
+  <div className="flex-shrink-0 w-24 p-1 border rounded-lg flex flex-col items-center">
+    <div className="mb-2">
+      <svg className="w-6 h-6 text-gray-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 5v14m7-7H5"></path>
+      </svg>
+    </div>
+    <div className="text-center text-sm font-semibold text-gray-700">
+      Item 3
+    </div>
+  </div>
+   
+  <div className="flex-shrink-0 w-24 p-1 border rounded-lg flex flex-col items-center">
+    <div className="mb-2">
+      <svg className="w-6 h-6 text-gray-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 5v14m7-7H5"></path>
+      </svg>
+    </div>
+    <div className="text-center text-sm font-semibold text-gray-700">
+      Item 3
+    </div>
+  </div>
+   
+  <div className="flex-shrink-0 w-24 p-1 border rounded-lg flex flex-col items-center">
+    <div className="mb-2">
+      <svg className="w-6 h-6 text-gray-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 5v14m7-7H5"></path>
+      </svg>
+    </div>
+    <div className="text-center text-sm font-semibold text-gray-700">
+      Item 3
+    </div>
+  </div>
+   
+  <div className="flex-shrink-0 w-24 p-1 border rounded-lg flex flex-col items-center">
+    <div className="mb-2">
+      <svg className="w-6 h-6 text-gray-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 5v14m7-7H5"></path>
+      </svg>
+    </div>
+    <div className="text-center text-sm font-semibold text-gray-700">
+      Item 3
+    </div>
+  </div>
+   
+  <div className="flex-shrink-0 w-24 p-1 border rounded-lg flex flex-col items-center">
+    <div className="mb-2">
+      <svg className="w-6 h-6 text-gray-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 5v14m7-7H5"></path>
+      </svg>
+    </div>
+    <div className="text-center text-sm font-semibold text-gray-700">
+      Item 3
+    </div>
+  </div>
+
+   
+  <div className="flex-shrink-0 w-24 p-1 border rounded-lg flex flex-col items-center">
+    <div className="mb-2">
+      <svg className="w-6 h-6 text-gray-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 5v14m7-7H5"></path>
+      </svg>
+    </div>
+    <div className="text-center text-sm font-semibold text-gray-700">
+      Item 3
+    </div>
+  </div>
+   
+  <div className="flex-shrink-0 w-24 p-1 border rounded-lg flex flex-col items-center">
+    <div className="mb-2">
+      <svg className="w-6 h-6 text-gray-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 5v14m7-7H5"></path>
+      </svg>
+    </div>
+    <div className="text-center text-sm font-semibold text-gray-700">
+      Item 3
+    </div>
+  </div>
+   
+  <div className="flex-shrink-0 w-24 p-1 border rounded-lg flex flex-col items-center">
+    <div className="mb-2">
+      <svg className="w-6 h-6 text-gray-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 5v14m7-7H5"></path>
+      </svg>
+    </div>
+    <div className="text-center text-sm font-semibold text-gray-700">
+      Item 3
+    </div>
+  </div>
+   
+  <div className="flex-shrink-0 w-24 p-1 border rounded-lg flex flex-col items-center">
+    <div className="mb-2">
+      <svg className="w-6 h-6 text-gray-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 5v14m7-7H5"></path>
+      </svg>
+    </div>
+    <div className="text-center text-sm font-semibold text-gray-700">
+      Item 3
+    </div>
+  </div>
+   
+  <div className="flex-shrink-0 w-24 p-1 border rounded-lg flex flex-col items-center">
+    <div className="mb-2">
+      <svg className="w-6 h-6 text-gray-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 5v14m7-7H5"></path>
+      </svg>
+    </div>
+    <div className="text-center text-sm font-semibold text-gray-700">
+      Item 3
+    </div>
+  </div>
+   
+  <div className="flex-shrink-0 w-24 p-1 border rounded-lg flex flex-col items-center">
+    <div className="mb-2">
+      <svg className="w-6 h-6 text-gray-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 5v14m7-7H5"></path>
+      </svg>
+    </div>
+    <div className="text-center text-sm font-semibold text-gray-700">
+      Item 3
+    </div>
+  </div>
+  
+
+
+</div>
 
               {/* Navigation Menu */}
               <nav className="menu mt-4">
