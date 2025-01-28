@@ -88,7 +88,7 @@ export default function AboutPage() {
               
               className="text-blue-500 mt-4 block hover:underline"
             >
-              View Details
+              Дэлгэрэнгүй
             </Link>
           </div>
         ))}
