@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import Image from "next/image";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 
@@ -29,13 +30,13 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         {/* Header Section */}
-        <header className="bg-gray-100 shadow">
+        <header className="bg-gray-100 shadow ">
           {/* Full-Width Background */}
           <div className="w-full bg-gray-200">
             {/* Centered Header Container */}
             <div className="mx-auto max-w-[1200px] px-4 pt-3">
               {/* Top bar */}
-              <div className="flex items-center justify-between">
+              <div className="flex items-center justify-between  border-b-4 border-black-600 ">
                 {/* Left Section */}
                 <div className="text-lg font-bold text-gray-700">Real Estate</div>
 
@@ -50,161 +51,60 @@ export default function RootLayout({
                 </div>
               </div>
               <div className="flex overflow-x-auto space-x-4 p-4">
-
+              <Link href="/" className="menu-link text-gray-700 hover:text-blue-500">
+                     
   <div className="flex-shrink-0 w-24 p-1 border rounded-lg flex flex-col items-center">
 
     <div className="mb-2">
-      <svg className="w-6 h-6 text-gray-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 5v14m7-7H5"></path>
-      </svg>
+    <Image
+                  src={"/img/menu/apartment.png"}
+                  alt={`Thumbnail 1`}
+                  width={32}
+                  height={32}
+                  className="object-cover w-full h-full"
+                />
     </div>
    
-    <div className="text-center text-sm font-semibold text-gray-700">
+    <div className="text-center text-xs text-gray-700">
       Шинэ орон сууц
     </div>
   </div>
 
-
+  </Link>
+  <Link href="/about/" className="menu-link text-gray-700 hover:text-blue-500">
   <div className="flex-shrink-0 w-24 p-1 border rounded-lg flex flex-col items-center">
     <div className="mb-2">
-      <svg className="w-6 h-6 text-gray-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 5v14m7-7H5"></path>
-      </svg>
+    <Image
+                  src={"/img/menu/rent.png"}
+                  alt={`Thumbnail 1`}
+                  width={32}
+                  height={32}
+                  className="object-cover w-full h-full"
+                />
     </div>
-    <div className="text-center text-sm font-semibold text-gray-700">
-      Item 2
+    <div className="text-center text-xs text-gray-700">
+     Хоногоор орон сууц түрээс
     </div>
-  </div>
-
-  
-  <div className="flex-shrink-0 w-24 p-1 border rounded-lg flex flex-col items-center">
-    <div className="mb-2">
-      <svg className="w-6 h-6 text-gray-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 5v14m7-7H5"></path>
-      </svg>
+  </div></Link>
+  <Link href="/about/" className="menu-link text-gray-700 hover:text-blue-500">
+  <div className="flex-shrink-0 w-28 p-1 border rounded-lg flex flex-col items-center">
+  <div className="mb-2">
+    <Image
+                  src={"/img/menu/rent1.png"}
+                  alt={`Thumbnail 1`}
+                  width={32}
+                  height={32}
+                  className="object-cover w-full h-full"
+                />
     </div>
-    <div className="text-center text-sm font-semibold text-gray-700">
-      Item 3
+    <div className="text-center text-xs text-gray-700">
+    Хашаа байшин түрээс
     </div>
-  </div>
-   
-  <div className="flex-shrink-0 w-24 p-1 border rounded-lg flex flex-col items-center">
-    <div className="mb-2">
-      <svg className="w-6 h-6 text-gray-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 5v14m7-7H5"></path>
-      </svg>
-    </div>
-    <div className="text-center text-sm font-semibold text-gray-700">
-      Item 3
-    </div>
-  </div>
-   
-  <div className="flex-shrink-0 w-24 p-1 border rounded-lg flex flex-col items-center">
-    <div className="mb-2">
-      <svg className="w-6 h-6 text-gray-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 5v14m7-7H5"></path>
-      </svg>
-    </div>
-    <div className="text-center text-sm font-semibold text-gray-700">
-      Item 3
-    </div>
-  </div>
-   
-  <div className="flex-shrink-0 w-24 p-1 border rounded-lg flex flex-col items-center">
-    <div className="mb-2">
-      <svg className="w-6 h-6 text-gray-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 5v14m7-7H5"></path>
-      </svg>
-    </div>
-    <div className="text-center text-sm font-semibold text-gray-700">
-      Item 3
-    </div>
-  </div>
-   
-  <div className="flex-shrink-0 w-24 p-1 border rounded-lg flex flex-col items-center">
-    <div className="mb-2">
-      <svg className="w-6 h-6 text-gray-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 5v14m7-7H5"></path>
-      </svg>
-    </div>
-    <div className="text-center text-sm font-semibold text-gray-700">
-      Item 3
-    </div>
-  </div>
-
-   
-  <div className="flex-shrink-0 w-24 p-1 border rounded-lg flex flex-col items-center">
-    <div className="mb-2">
-      <svg className="w-6 h-6 text-gray-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 5v14m7-7H5"></path>
-      </svg>
-    </div>
-    <div className="text-center text-sm font-semibold text-gray-700">
-      Item 3
-    </div>
-  </div>
-   
-  <div className="flex-shrink-0 w-24 p-1 border rounded-lg flex flex-col items-center">
-    <div className="mb-2">
-      <svg className="w-6 h-6 text-gray-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 5v14m7-7H5"></path>
-      </svg>
-    </div>
-    <div className="text-center text-sm font-semibold text-gray-700">
-      Item 3
-    </div>
-  </div>
-   
-  <div className="flex-shrink-0 w-24 p-1 border rounded-lg flex flex-col items-center">
-    <div className="mb-2">
-      <svg className="w-6 h-6 text-gray-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 5v14m7-7H5"></path>
-      </svg>
-    </div>
-    <div className="text-center text-sm font-semibold text-gray-700">
-      Item 3
-    </div>
-  </div>
-   
-  <div className="flex-shrink-0 w-24 p-1 border rounded-lg flex flex-col items-center">
-    <div className="mb-2">
-      <svg className="w-6 h-6 text-gray-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 5v14m7-7H5"></path>
-      </svg>
-    </div>
-    <div className="text-center text-sm font-semibold text-gray-700">
-      Item 3
-    </div>
-  </div>
-   
-  <div className="flex-shrink-0 w-24 p-1 border rounded-lg flex flex-col items-center">
-    <div className="mb-2">
-      <svg className="w-6 h-6 text-gray-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 5v14m7-7H5"></path>
-      </svg>
-    </div>
-    <div className="text-center text-sm font-semibold text-gray-700">
-      Item 3
-    </div>
-  </div>
-   
-  <div className="flex-shrink-0 w-24 p-1 border rounded-lg flex flex-col items-center">
-    <div className="mb-2">
-      <svg className="w-6 h-6 text-gray-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 5v14m7-7H5"></path>
-      </svg>
-    </div>
-    <div className="text-center text-sm font-semibold text-gray-700">
-      Item 3
-    </div>
-  </div>
-  
-
-
+  </div></Link>
 </div>
 
               {/* Navigation Menu */}
-              <nav className="menu mt-4">
+              {/* <nav className="menu mt-4">
                 <ul className="menu-list flex space-x-6">
                   <li>
                     <Link href="/" className="menu-link text-gray-700 hover:text-blue-500">
@@ -237,7 +137,7 @@ export default function RootLayout({
                     </Link>
                   </li>
                 </ul>
-              </nav>
+              </nav> */}
             </div>
           </div>
         </header>

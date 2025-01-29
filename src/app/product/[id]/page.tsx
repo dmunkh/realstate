@@ -1,8 +1,10 @@
-"use client"; // Mark this file as a client component
+"use client";
 
 import { useParams } from "next/navigation";
 import { useState } from "react";
 import Image from "next/image";
+import Link from "next/link";
+import { ArrowLeft } from "lucide-react"; // Import back icon
 
 const items = [
   {
@@ -38,12 +40,19 @@ export default function ProductDetailPage() {
   const [selectedImage, setSelectedImage] = useState(product.images[0]);
 
   return (
-    <div className="max-w-[1200px] mx-auto px-4 py-8">
-      <h1 className="text-3xl font-bold mb-6">{product.title}</h1>
+    <div className="max-w-[1200px] mx-auto px-4 py-8 relative">
+      {/* Back Icon */}
+      <div className="absolute top-4 left-4">
+        <Link href="/" className="text-gray-700 hover:text-gray-900 transition">
+          <ArrowLeft className="w-6 h-6" /> {/* Adjust size if needed */} 
+        </Link>
+      </div>
+
+      <h1 className="text-xl font-bold mb-6 mt-4">{product.title}</h1>
+
       <div className="flex gap-8">
         {/* Left - Main Image and Image List */}
         <div>
-          {/* Main Image */}
           <Image
             src={selectedImage}
             alt={product.title}
@@ -51,13 +60,11 @@ export default function ProductDetailPage() {
             height={300}
             className="object-cover rounded-md mb-4"
           />
-
-          {/* Image List */}
           <div className="flex gap-2">
             {product.images.map((image, index) => (
               <div
                 key={index}
-                onClick={() => setSelectedImage(image)} // Set the selected image on click
+                onClick={() => setSelectedImage(image)}
                 className={`w-20 h-20 border rounded-md overflow-hidden cursor-pointer ${
                   selectedImage === image ? "border-blue-500" : "border-gray-300"
                 }`}

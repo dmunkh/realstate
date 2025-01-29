@@ -14,7 +14,7 @@ const items = [
   },
   {
     id: 2,
-    image: "/img/tanan_01.jpg",
+    image: "/img/apartment.webp",
     title: "Item Two",
     price: "$200",
   },
@@ -39,7 +39,7 @@ export default function HomePage() {
         </div>
       )}
 
-      <h1 className="text-3xl font-bold text-left mb-8">Our Products</h1>
+      <h1 className="text-xl font-bold text-left mb-4">Шинэ орон сууц</h1>
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
         {items.map((item) => (
           <div
