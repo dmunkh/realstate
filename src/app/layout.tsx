@@ -103,6 +103,20 @@ export default function RootLayout({
                     <div className="text-center text-xs text-gray-700">Хашаа байшин түрээс</div>
                   </div>
                 </Link>
+                <Link href="/rent-house" className="menu-link text-gray-700 hover:text-blue-500">
+                  <div className="flex-shrink-0 w-28 p-1 border rounded-lg flex flex-col items-center">
+                    <div className="mb-2">
+                      <Image
+                        src="/img/menu/rent1.png"
+                        alt="Rent House"
+                        width={32}
+                        height={32}
+                        className="object-cover w-full h-full"
+                      />
+                    </div>
+                    <div className="text-center text-xs text-gray-700">Автомашин</div>
+                  </div>
+                </Link>
               </div>
             </div>
           </div>

@@ -23,11 +23,11 @@ export default function RegisterPage() {
       <div className="flex justify-between items-center mb-6">
         <h1 className="text-2xl font-bold">Registered Users </h1>
         <button
-          onClick={() => alert("Add user functionality here!")}
-          className="bg-green-500 text-white px-4 py-2 rounded hover:bg-green-600 transition"
-        >
-          + Add
-        </button>
+        onClick={() => router.push("/register/add")}
+        className="mt-4 bg-green-500 text-white px-4 py-2 rounded hover:bg-green-600 transition"
+      >
+        + Add
+      </button>
       </div>
 
       {/* User List */}
