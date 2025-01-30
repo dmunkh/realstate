@@ -56,7 +56,7 @@ export default function HomePage() {
               />
             </div>
             <h2 className="text-lg font-semibold mt-4">{item.title}</h2>
-            <p className="text-blue-500 font-bold mt-2">{item.price}</p>
+            <p className="text-blue-500 text-xl font-bold mt-2">{item.price}</p>
             <button
               onClick={() => handleNavigation(item.id)}
               className="text-blue-500 mt-4 block hover:underline"
