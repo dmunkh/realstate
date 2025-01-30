@@ -34,13 +34,13 @@ export default function RootLayout({
         {/* Header Section */}
         <header className="bg-gray-100 shadow">
           {/* Full-Width Background */}
-          <div className="w-full bg-gray-200">
+          <div className="w-full bg-red-500">
             {/* Centered Header Container */}
-            <div className="mx-auto max-w-[1200px] px-4 pt-3">
+            <div className="mx-auto max-w-[1200px] px-4 pt-3 pb-3">
               {/* Top Bar */}
-              <div className="flex items-center justify-between border-b-4 border-black-600">
+              <div className="flex items-center justify-between ">
                 {/* Left Section - Logo / Title */}
-                <div className="text-lg font-bold text-gray-700">Real Estate</div>
+                <div className="text-lg font-bold text-white">Real Estate</div>
 
                 {/* Right - Login Button */}
                 <div>
@@ -55,10 +55,13 @@ export default function RootLayout({
               </div>
 
               {/* Navigation Menu - Scrollable Icons */}
-              <div className="flex overflow-x-auto space-x-4 p-4">
+            
+            </div>
+          </div>
+          <div className="flex items-center justify-left mx-auto max-w-[1200px] overflow-x-auto space-x-4 p-4">
                 {/* New Apartment */}
                 <Link href="/" className="menu-link text-gray-700 hover:text-blue-500">
-                  <div className="flex-shrink-0 w-24 p-1 border rounded-lg flex flex-col items-center">
+                  <div className="flex-shrink-0 w-24 h-24 p-1 border rounded-lg flex flex-col items-center">
                     <div className="mb-2">
                       <Image
                         src="/img/menu/apartment.png"
@@ -74,7 +77,7 @@ export default function RootLayout({
 
                 {/* Rent Apartment */}
                 <Link href="/rent-apartment" className="menu-link text-gray-700 hover:text-blue-500">
-                  <div className="flex-shrink-0 w-24 p-1 border rounded-lg flex flex-col items-center">
+                  <div className="flex-shrink-0 w-24 h-24 p-1 border rounded-lg flex flex-col items-center">
                     <div className="mb-2">
                       <Image
                         src="/img/menu/rent.png"
@@ -90,7 +93,7 @@ export default function RootLayout({
 
                 {/* Rent House */}
                 <Link href="/rent-house" className="menu-link text-gray-700 hover:text-blue-500">
-                  <div className="flex-shrink-0 w-28 p-1 border rounded-lg flex flex-col items-center">
+                  <div className="flex-shrink-0 w-28 h-24 p-1 border rounded-lg flex flex-col items-center">
                     <div className="mb-2">
                       <Image
                         src="/img/menu/rent1.png"
@@ -104,10 +107,10 @@ export default function RootLayout({
                   </div>
                 </Link>
                 <Link href="/rent-house" className="menu-link text-gray-700 hover:text-blue-500">
-                  <div className="flex-shrink-0 w-28 p-1 border rounded-lg flex flex-col items-center">
+                  <div className="flex-shrink-0 w-28 h-24 p-1 border rounded-lg flex flex-col items-center">
                     <div className="mb-2">
                       <Image
-                        src="/img/menu/rent1.png"
+                        src="/img/menu/car.png"
                         alt="Rent House"
                         width={32}
                         height={32}
@@ -118,8 +121,6 @@ export default function RootLayout({
                   </div>
                 </Link>
               </div>
-            </div>
-          </div>
         </header>
 
         {/* Main Content - Wrapped in UserProvider for Global State */}
