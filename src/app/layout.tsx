@@ -92,13 +92,3 @@ export default function RootLayout({
 }
 
 // Reusable MenuItem Component
-const MenuItem = ({ href, src, label }: { href: string; src: string; label: string }) => (
-  <Link href={href} className="menu-link text-gray-700 hover:text-blue-500">
-    <div className="flex-shrink-0 w-24 h-24 p-1 border rounded-lg flex flex-col items-center">
-      <div className="mb-2">
-        <Image src={src} alt={label} width={32} height={32} className="object-cover w-full h-full" />
-      </div>
-      <div className="text-center text-xs text-gray-700">{label}</div>
-    </div>
-  </Link>
-);
