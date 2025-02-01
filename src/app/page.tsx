@@ -39,7 +39,16 @@ export default function HomePage() {
         </div>
       )}
 
-      <h1 className="text-xl font-bold text-left mb-4">Шинэ орон сууц</h1>
+<h1 className="text-xl font-bold flex items-center space-x-2">
+  <Image
+    src="/img/menu/apartment.png"
+    alt="Шинэ орон сууц"
+    width={32}
+    height={32}
+    className="w-8 h-8 object-cover"
+  />
+  <span>Шинэ орон сууц</span>
+</h1>
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
         {items.map((item) => (
           <div
@@ -56,7 +65,7 @@ export default function HomePage() {
               />
             </div>
             <h2 className="text-lg font-semibold mt-4">{item.title}</h2>
-            <p className="text-blue-500 text-xl font-bold mt-2">{item.price}</p>
+            <p className="text-blue-500  font-bold mt-2">{item.price}</p>
             <button
               onClick={() => handleNavigation(item.id)}
               className="text-blue-500 mt-4 block hover:underline"

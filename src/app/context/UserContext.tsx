@@ -8,7 +8,7 @@ interface User {
 
 interface UserContextType {
   user: User | null;
-  setUser: (user: User) => void;
+  setUser: (user: User | null) => void; // ✅ Fix: Allow null
 }
 
 // ✅ Fix: Correct context creation
@@ -16,7 +16,7 @@ const UserContext = createContext<UserContextType | undefined>(undefined);
 
 export const UserProvider = ({ children }: { children: ReactNode }) => {
   const [user, setUser] = useState<User | null>(null);
-
+  
   return (
     <UserContext.Provider value={{ user, setUser }}>
       {children}

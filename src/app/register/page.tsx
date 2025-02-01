@@ -18,7 +18,8 @@ export default function RegisterPage() {
   ]);
 
   return (
-    <div className="max-w-2xl mx-auto p-6">
+    <div className="flex items-top justify-center min-h-screen pt-1">
+    <div className="w-full max-w-[1200px] bg-white p-8 rounded-lg shadow-md relative pt-4">
       {/* Top Bar with Add Button */}
       <div className="flex justify-between items-center mb-6">
         <h1 className="text-2xl font-bold">Registered Users </h1>
@@ -40,6 +41,6 @@ export default function RegisterPage() {
           ))}
         </ul>
       </div>
-    </div>
+    </div></div>
   );
 }

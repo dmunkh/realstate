@@ -17,7 +17,7 @@ export default function AddUserPage() {
   };
 
   return (
-    <div className="flex items-top justify-center min-h-screen bg-gray-100">
+    <div className="flex items-top justify-center min-h-screen pt-1">
       <div className="w-full max-w-[1200px] bg-white p-8 rounded-lg shadow-md relative">
         
         {/* Back Button */}

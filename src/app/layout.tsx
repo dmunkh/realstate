@@ -3,6 +3,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { Geist, Geist_Mono } from "next/font/google";
 import { UserProvider } from "../app/context/UserContext";
+import Header from "../app/components/Header"; // Import Header
 import "./globals.css";
 
 // Import Google Fonts
@@ -27,40 +28,16 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
+   // Get user from context
   return (
     <html lang="en">
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
-        {/* Header Section */}
-        <header className="bg-gray-100 shadow">
-          <div className="w-full bg-red-500">
-            <div className="mx-auto max-w-[1200px] px-4 pt-3 pb-3">
-              <div className="flex items-center justify-between">
-                <div className="text-lg font-bold text-white">Real Estate</div>
-
-                <div>
-                  <Link
-                    href="/login"
-                    className="px-4 py-2 text-sm font-medium text-white bg-blue-500 rounded hover:bg-blue-600 transition"
-                  >
-                    Login
-                  </Link>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          {/* Navigation Menu */}
-          <div className="flex items-center justify-left mx-auto max-w-[1200px] overflow-x-auto space-x-4 p-4">
-            <MenuItem href="/" src="/img/menu/apartment.png" label="Шинэ орон сууц" />
-            <MenuItem href="/rent-apartment" src="/img/menu/rent.png" label="Хоногоор орон сууц түрээс" />
-            <MenuItem href="/rent-house" src="/img/menu/rent1.png" label="Хашаа байшин түрээс" />
-            <MenuItem href="/rent-car" src="/img/menu/car.png" label="Автомашин" />
-          </div>
-        </header>
+   
+     
 
         {/* Main Content */}
         <main className="mx-auto max-w-[1200px] px-4">
-          <UserProvider>{children}</UserProvider>
+          <UserProvider>   <Header /> {/* ✅ Now the Header runs on the client */}{children}</UserProvider>
         </main>
 
         {/* Footer Section */}
@@ -104,7 +81,7 @@ export default function RootLayout({
             </div>
 
             {/* Copyright */}
-            <div className="text-center text-sm mt-6 border-t border-gray-300 pt-4">
+            <div className="text-center text-sm mt-6 border-t border-gray- pt-4">
               © {new Date().getFullYear()} Орхон аймаг
             </div>
           </div>
