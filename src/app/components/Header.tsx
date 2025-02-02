@@ -27,13 +27,7 @@ const Header = () => {
         <div className="text-lg font-bold text-white">Real Estate</div>
 
         <div className="flex items-center space-x-4">
-          {/* News Button */}
-          <Link
-            href="/news" 
-            className="px-4 py-2 text-sm font-medium text-white bg-yellow-500 rounded hover:bg-yellow-600 transition"
-          >
-            News
-          </Link>
+         
 
           {/* User Dropdown */}
           {user ? (

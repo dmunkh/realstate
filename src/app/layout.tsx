@@ -31,13 +31,15 @@ export default function RootLayout({
    // Get user from context
   return (
     <html lang="en">
+       <link rel="icon" href="/favicon.png" />
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
    
      
 
         {/* Main Content */}
-        <main className="mx-auto max-w-[1200px] px-4">
-          <UserProvider>   <Header /> {/* ✅ Now the Header runs on the client */}{children}</UserProvider>
+        <main >
+          <UserProvider>   <Header /> {/* ✅ Now the Header runs on the client */}
+          {children}</UserProvider>
         </main>
 
         {/* Footer Section */}
@@ -46,7 +48,7 @@ export default function RootLayout({
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
               {/* Contact Us */}
               <div>
-                <h1 className="text-lg  mb-2"> Холбоо барих:</h1>
+                <h1 className="text-sm  mb-2"> Холбоо барих:</h1>
                 <p>Email: support@realestate.com</p>
                 <p>Утас: 9559-0090</p>
                 <p>Хаяг: 123 Real Estate St, City, Country</p>
@@ -54,7 +56,7 @@ export default function RootLayout({
 
               {/* Quick Links */}
               <div>
-                <h3 className="text-lg font-semibold mb-2">Quick Links</h3>
+                <h3 className="text-sm  mb-2">Quick Links</h3>
                 <ul className="space-y-2">
                   <li><Link href="/" className="hover:text-gray-400">Home</Link></li>
                   <li><Link href="/about" className="hover:text-gray-400">About Us</Link></li>
@@ -65,7 +67,7 @@ export default function RootLayout({
 
               {/* Social Media */}
               <div>
-                <h3 className="text-lg font-semibold mb-2">Follow Us</h3>
+                <h3 className="text-sm  mb-2">Follow Us</h3>
                 <div className="flex space-x-4">
                   <Link href="https://facebook.com" target="_blank">
                     <Image src="/img/social/facebook.png" alt="Facebook" width={24} height={24} />
