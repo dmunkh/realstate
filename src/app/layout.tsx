@@ -19,8 +19,8 @@ const geistMono = Geist_Mono({
 
 // Page Metadata
 export const metadata: Metadata = {
-  title: "Real Estate App",
-  description: "Find and rent real estate properties easily.",
+  title: "Эрдэнэт хотын бүх төрлийн зарын сайт",
+  description: "Түрээс, зуучлал, үл хөдлөх, автомашин гэх мэт",
 };
 
 export default function RootLayout({
@@ -34,7 +34,7 @@ export default function RootLayout({
       <head>
       <meta property="og:title" content="Зуучлал, түрээс" />
 <meta property="og:description" content="Орхон аймаг, эрдэнэт хотын бүх төрлийн зарын нэгдсэн сайт" />
-<meta property="og:image" content="https://content.ikon.mn/news/2020/2/21/75fe98_nano1_x974.jpg" />
+<meta property="og:image" content="/img/menu/apartment.png" />
 <meta property="og:url" content="https://erdenetzuuch.online" />
 <meta property="og:type" content="website" />
        <link rel="icon" href="/favicon.png" />
