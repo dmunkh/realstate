@@ -32,9 +32,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-      <meta property="og:title" content="Your Page Title" />
-<meta property="og:description" content="A brief description of your page." />
-<meta property="og:image" content="https://www.erdenetzuuch.online/_next/image?url=%2Fimg%2Fapartment.webp&w=384&q=75" />
+      <meta property="og:title" content="Зуучлал, түрээс" />
+<meta property="og:description" content="Орхон аймаг, эрдэнэт хотын бүх төрлийн зарын нэгдсэн сайт" />
+<meta property="og:image" content="https://content.ikon.mn/news/2020/2/21/75fe98_nano1_x974.jpg" />
 <meta property="og:url" content="https://erdenetzuuch.online" />
 <meta property="og:type" content="website" />
        <link rel="icon" href="/favicon.png" />
