@@ -31,7 +31,14 @@ export default function RootLayout({
    // Get user from context
   return (
     <html lang="en">
+      <head>
+      <meta property="og:title" content="Your Page Title" />
+<meta property="og:description" content="A brief description of your page." />
+<meta property="og:image" content="https://www.erdenetzuuch.online/_next/image?url=%2Fimg%2Fapartment.webp&w=384&q=75" />
+<meta property="og:url" content="https://erdenetzuuch.online" />
+<meta property="og:type" content="website" />
        <link rel="icon" href="/favicon.png" />
+       </head>
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
    
      
