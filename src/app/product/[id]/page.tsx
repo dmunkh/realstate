@@ -56,8 +56,8 @@ export default function ProductDetailPage() {
           <Image
             src={selectedImage}
             alt={product.title}
-            width={400}
-            height={300}
+            width={800}
+            height={600}
             className="object-cover rounded-md mb-4"
           />
           <div className="flex gap-2">

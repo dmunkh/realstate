@@ -3,7 +3,8 @@ import Link from "next/link";
 import Image from "next/image";
 import { Geist, Geist_Mono } from "next/font/google";
 import { UserProvider } from "../app/context/UserContext";
-import Header from "../app/components/Header"; // Import Header
+import  Header  from "../app/context/Header";
+
 import "./globals.css";
 
 // Import Google Fonts
@@ -45,7 +46,8 @@ export default function RootLayout({
 
         {/* Main Content */}
         <main >
-          <UserProvider>   <Header /> {/* ✅ Now the Header runs on the client */}
+          <UserProvider>  
+          <Header />
           {children}</UserProvider>
         </main>
 
