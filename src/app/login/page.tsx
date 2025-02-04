@@ -2,8 +2,8 @@
 import { useUser } from "../context/UserContext"; // Fix context file name
 import { useRouter } from "next/navigation";
 import { useState } from "react";
-import PhoneLogin from "../components/login_firebase";
-import PhoneAuth from "../components/PhoneAuth";
+// import PhoneLogin from "../components/login_firebase";
+// import PhoneAuth from "../components/PhoneAuth";
 export default function LoginPage() {
   const userContext = useUser(); // Ensure useUser is not null
   const router = useRouter();
@@ -34,8 +34,8 @@ export default function LoginPage() {
         <h2 className="text-2xl font-semibold text-center text-gray-700 mb-4">
           Login
         </h2>
-        <PhoneLogin />
-        <PhoneAuth />
+        {/* <PhoneLogin />
+        <PhoneAuth /> */}
         <form onSubmit={handleLogin}>
           {/* Email Input */}
           <div className="mb-4">

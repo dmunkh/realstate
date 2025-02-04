@@ -1,8 +1,12 @@
-'use client'; // Ensures this runs on the client side
-
 import { useEffect, useState } from 'react';
-import { auth, RecaptchaVerifier } from '../firbase'; // Import Firebase instance
-import { signInWithPhoneNumber } from 'firebase/auth';
+import {
+  getAuth,
+  RecaptchaVerifier,
+  signInWithPhoneNumber,
+} from 'firebase/auth';
+import { app } from '../firebase'; // Ensure you import your Firebase config
+
+const auth = getAuth(app); // Initialize Firebase Auth
 
 const PhoneAuth = () => {
   const [phoneNumber, setPhoneNumber] = useState('');
@@ -10,15 +14,23 @@ const PhoneAuth = () => {
   const [code, setCode] = useState('');
 
   useEffect(() => {
-    auth.settings.appVerificationDisabledForTesting = true; // Disable reCAPTCHA in dev (Testing Only)
+    if (!window.recaptchaVerifier) {
+      window.recaptchaVerifier = new RecaptchaVerifier(
+        auth,
+        'recaptcha-container',
+        {
+          size: 'invisible', // Can also be 'normal' if you want a visible reCAPTCHA
+          callback: (response) => {
+            console.log('reCAPTCHA verified!', response);
+          },
+          'expired-callback': () => {
+            console.log('reCAPTCHA expired');
+          },
+        }
+      );
 
-    window.recaptchaVerifier = new RecaptchaVerifier(
-      auth,
-      'recaptcha-container',
-      {
-        size: 'invisible',
-      }
-    );
+      auth.settings.appVerificationDisabledForTesting = false; // Ensure reCAPTCHA is enabled
+    }
   }, []);
 
   const sendOTP = async () => {

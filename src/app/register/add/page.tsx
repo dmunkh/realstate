@@ -7,6 +7,7 @@ export default function AddUserPage() {
   const router = useRouter();
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
+  const [text, setText] = useState("");
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -37,6 +38,13 @@ export default function AddUserPage() {
           {/* Name Input */}
           <div>
             <label className="block text-gray-600 font-medium">Name</label>
+            <textarea
+        value={text}
+        onChange={(e) => setText(e.target.value)}
+        rows={6}
+        className="w-full border p-2"
+        placeholder="Enter text here..."
+      />
             <input
               type="text"
               placeholder="Enter Name"

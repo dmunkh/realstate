@@ -35,7 +35,7 @@ export default function RootLayout({
       <head>
       <meta property="og:title" content="Зуучлал, түрээс" />
 <meta property="og:description" content="Орхон аймаг, эрдэнэт хотын бүх төрлийн зарын нэгдсэн сайт" />
-<meta property="og:image" content="/img/menu/apartment.png" />
+<meta property="og:image" content="https://erdenetzuuch.online/img/menu/apartment.png?v=2" />
 <meta property="og:url" content="https://erdenetzuuch.online" />
 <meta property="og:type" content="website" />
        <link rel="icon" href="/favicon.png" />
