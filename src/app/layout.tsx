@@ -4,6 +4,7 @@ import Image from "next/image";
 import { Geist, Geist_Mono } from "next/font/google";
 import { UserProvider } from "../app/context/UserContext";
 import  Header  from "../app/context/Header";
+// import Header from "./components/Header.js"
 
 import "./globals.css";
 
@@ -29,7 +30,7 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
-   // Get user from context
+   // Get user from contextv
   return (
     <html lang="en">
       <head>
@@ -45,7 +46,7 @@ export default function RootLayout({
       {/* Main Content */}
         <main >
           <UserProvider>  
-          <Header />
+          <Header  />
           {children}</UserProvider>
         </main>
 
@@ -76,7 +77,7 @@ export default function RootLayout({
               <div>
                 <h3 className="text-sm  mb-2">Follow Us</h3>
                 <div className="flex space-x-4">
-                  <Link href="https://facebook.com" target="_blank">
+                  <Link href="https://www.facebook.com/profile.php?id=61568206667360" target="_blank">
                     <Image src="/img/social/facebook.png" alt="Facebook" width={24} height={24} />
                   </Link>
                   <Link href="https://twitter.com" target="_blank">
