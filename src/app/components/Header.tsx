@@ -6,7 +6,7 @@ import { useState } from "react";
 import { useRouter } from "next/navigation";
 import { useUser } from "../context/UserContext";
 
-const Header = ({ onMenuClick }) => {  // ✅ Removed TypeScript annotations
+const Header = () => {  // ✅ Removed TypeScript annotations
   const { user, setUser } = useUser();
   const [dropdownOpen, setDropdownOpen] = useState(false);
   const router = useRouter();
