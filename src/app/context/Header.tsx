@@ -20,11 +20,11 @@ const Header = () => {
     setDropdownOpen(false); // Close dropdown when a link is clicked
   };
   return (
-    <header className="bg-gray-100 shadow">
+    <header className="bg-gray-100 shadow ">
     {/* Top Header Bar */}
-    <div className="w-full bg-white">
+    <div className="w-full bg-white border-b-2 border-red-500">
       <div className="mx-auto max-w-[1200px] px-4 pt-3 pb-3 flex justify-between items-center">
-        <div className="text-lg font-bold text-white mb-0"> <Image
+        <div className="text-lg font-bold text-black mb-0"> <Image
                     src="/img/logo03.png"
                     alt="logo"
                     width={160}
@@ -79,7 +79,7 @@ const Header = () => {
     </div>
 
     {/* Navigation Menu */}
-    <div className="flex items-center justify-left mx-auto max-w-[1200px] overflow-x-auto space-x-4 p-4">
+    <div className="flex items-center justify-left mx-auto max-w-[1200px] overflow-x-auto space-x-4 p-4  ">
       <MenuItem href="/" src="/img/menu/apartment.png" label="Шинэ орон сууц" />
       <MenuItem href="/rent-apartment" src="/img/menu/rent.png" label="Хоногоор орон сууц түрээс" />
       <MenuItem href="/rent-house" src="/img/menu/rent1.png" label="Хашаа байшин түрээс" />
