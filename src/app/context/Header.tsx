@@ -22,54 +22,58 @@ const Header = () => {
   return (
     <header className="bg-gray-100 shadow">
     {/* Top Header Bar */}
-    <div className="w-full bg-red-500">
+    <div className="w-full bg-white">
       <div className="mx-auto max-w-[1200px] px-4 pt-3 pb-3 flex justify-between items-center">
-        <div className="text-lg font-bold text-white">Real Estate</div>
+        <div className="text-lg font-bold text-white mb-0"> <Image
+                    src="/img/logo03.png"
+                    alt="logo"
+                    width={160}
+                    height={50}
+                    className="object-cover rounded-md mb-0"
+                  /></div>
+            <div className="flex items-center space-x-4">
+ 
+            {/* User Dropdown */}
+            {user ? (
+                <div className="relative">
+                <button
+                    onClick={() => setDropdownOpen(!dropdownOpen)}
+                    className="px-4 py-2 text-sm font-medium text-white bg-green-500 rounded"
+                >
+                    {user.name} ⏷
+                </button>
 
-        <div className="flex items-center space-x-4">
-         
-
-          {/* User Dropdown */}
-          {user ? (
-            <div className="relative">
-              <button
-                onClick={() => setDropdownOpen(!dropdownOpen)}
-                className="px-4 py-2 text-sm font-medium text-white bg-green-500 rounded"
-              >
-                {user.name} ⏷
-              </button>
-
-              {dropdownOpen && (
-                <div className="absolute right-0 mt-2 w-40 bg-white rounded-lg shadow-lg border">
-                  <Link
-                    href="/register" onClick={handleLinkClick} // Close dropdown when clicked
-                    className="block px-4 py-2 text-gray-700 hover:bg-gray-100"
-                  >
-                    Зар нэмэх
-                  </Link>
-                  <Link
-                    href="/profile" onClick={handleLinkClick} // Close dropdown when clicked
-                    className="block px-4 py-2 text-gray-700 hover:bg-gray-100"
-                  >
-                    Profile
-                  </Link>
-                  <button
-                    onClick={handleLogout}
-                    className="block w-full text-left px-4 py-2 text-gray-700 hover:bg-gray-100"
-                  >
-                    Logout
-                  </button>
+                {dropdownOpen && (
+                    <div className="absolute right-0 mt-2 w-40 bg-white rounded-lg shadow-lg border">
+                    <Link
+                        href="/register" onClick={handleLinkClick} // Close dropdown when clicked
+                        className="block px-4 py-2 text-gray-700 hover:bg-gray-100"
+                    >
+                        Зар нэмэх
+                    </Link>
+                    <Link
+                        href="/profile" onClick={handleLinkClick} // Close dropdown when clicked
+                        className="block px-4 py-2 text-gray-700 hover:bg-gray-100"
+                    >
+                        Profile
+                    </Link>
+                    <button
+                        onClick={handleLogout}
+                        className="block w-full text-left px-4 py-2 text-gray-700 hover:bg-gray-100"
+                    >
+                        Logout
+                    </button>
+                    </div>
+                )}
                 </div>
-              )}
-            </div>
-          ) : (
-            <Link
-              href="/login"
-              className="px-4 py-2 text-sm font-medium text-white bg-blue-500 rounded hover:bg-blue-600 transition"
-            >
-              Login
-            </Link>
-          )}
+            ) : (
+                <Link
+                href="/login"
+                className="px-4 py-2 text-sm font-medium text-white bg-blue-500 rounded hover:bg-blue-600 transition"
+                >
+                Login
+                </Link>
+            )}
         </div>
       </div>
     </div>

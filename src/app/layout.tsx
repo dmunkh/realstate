@@ -34,17 +34,15 @@ export default function RootLayout({
     <html lang="en">
       <head>
       <meta property="og:title" content="Зуучлал, түрээс" />
-<meta property="og:description" content="Орхон аймаг, эрдэнэт хотын бүх төрлийн зарын нэгдсэн сайт" />
-<meta property="og:image" content="https://erdenetzuuch.online/img/tanan_01.jpg" />
-<meta property="og:url" content="https://erdenetzuuch.online" />
-<meta property="og:type" content="website" />
+      <meta property="og:description" content="Орхон аймаг, эрдэнэт хотын бүх төрлийн зарын нэгдсэн сайт" />
+      <meta property="og:image" content="https://www.erdenetzuuch.online/img/tanan_01.jpg" />
+      <meta property="og:url" content="https://www.erdenetzuuch.online" />
+      <meta property="og:type" content="website" />
        <link rel="icon" href="/favicon.png" />
        </head>
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
    
-     
-
-        {/* Main Content */}
+      {/* Main Content */}
         <main >
           <UserProvider>  
           <Header />
