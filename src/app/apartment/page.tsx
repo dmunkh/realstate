@@ -6,17 +6,17 @@ import { useState } from "react";
 import { useRouter } from "next/navigation";
 
 const items = [
-  {
-    id: 1,
-    image: "/img/tanan_01.jpg",
-    title: "Item One",
-    price: "$100",
-  },
+//   {
+//     id: 1,
+//     image: "/img/tanan_01.jpg",
+//     title: "Item One",
+//     price: "$100",
+//   },
   {
     id: 2,
     image: "/img/apartment.webp",
-    title: "Item Two",
-    price: "$200",
+    title: "Орон сууц 1",
+    price: ".",
   },
 ];
 
@@ -47,7 +47,7 @@ export default function ApartmentPage() {
     height={32}
     className="w-8 h-8 object-cover"
   />
-  <span> орон сууц</span>
+  <span>Шинэ орон сууц</span>
 </h1>
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
         {items.map((item) => (
@@ -71,7 +71,7 @@ export default function ApartmentPage() {
               onClick={() => handleNavigation(item.id)}
               className="text-blue-500 mt-4 block hover:underline"
             >
-              View Details
+              Дэлгэрэнгүй
             </button>
           </div>
         ))}
