@@ -3,6 +3,7 @@
 import { useParams } from "next/navigation";
 import { useState } from "react";
 import Image from "next/image";
+import Head from "next/head";
 // import Link from "next/link";
 // import { ArrowLeft } from "lucide-react"; // Import back icon
 import moment from "moment";
@@ -32,7 +33,16 @@ export default function ProductDetailPage() {
   const id = Array.isArray(params?.id) ? params.id[0] : params?.id;
 const [currentDate, setCurrentDate] = useState(moment()); // Current month & year
   const [selectedDate, setSelectedDate] = useState(moment()); // Selected date
+  const productId = params.id;
 
+  const products = {
+    id: productId,
+    title: "Awesome Product",
+    description: "This is an amazing product!",
+    image: "/img/product.jpg",
+  };
+
+  const fullUrl = `https://www.erdenetzuuch.online/product/2`;
   
   // Find the product based on the ID
   const product = items.find((item) => item.id === parseInt(id || "", 10));
@@ -66,6 +76,16 @@ const [currentDate, setCurrentDate] = useState(moment()); // Current month & yea
   const [selectedImage, setSelectedImage] = useState(product.images[0]);
 
   return (
+    <> <Head>
+    <title>{product.title}</title>
+    <meta property="og:title" content={product.title} />
+    <meta property="og:description" content={product.description} />
+    <meta property="og:image" content="https://www.erdenetzuuch.online/img/tanan_01.jpg" />
+    <meta property="og:image:secure_url" content="https://www.erdenetzuuch.online/img/tanan_01.jpg" />
+    <meta property="og:url" content={fullUrl} />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
+  </Head>
     <div className="max-w-[1200px] mx-auto px-4 py-8 relative">
       {/* Back Icon */}
       {/* <div className="absolute top-4 left-4">
@@ -156,5 +176,6 @@ const [currentDate, setCurrentDate] = useState(moment()); // Current month & yea
         </div>
       </div>
     </div>
+    </>
   );
 }
