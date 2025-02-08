@@ -9,7 +9,7 @@ import Head from "next/head";
 import moment from "moment";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 
-const weekdays = ["Дав", "Мяг", "Лха", "Пүр", "Баа", "Бям", "Ням"];
+const weekdays = ["Да", "Мя", "Лх", "Пү", "Ба", "Бя", "Ня"];
 
 const items = [
   {
@@ -129,7 +129,7 @@ const [currentDate, setCurrentDate] = useState(moment()); // Current month & yea
 
         {/* Right - Product Details */}
         <div>
-        <div className="max-w-md mx-auto bg-white p-4 rounded-lg shadow-lg">
+        <div className="w-[280px] mx-auto bg-white p-4 rounded-lg overflow-x-auto shadow-lg">
      
      <div className="flex justify-between items-center mb-4">
        <button onClick={() => handleMonthChange(-1)}>
