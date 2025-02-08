@@ -3,6 +3,13 @@
 import Image from "next/image";
 import { useState, useCallback } from "react";
 import { useRouter } from "next/navigation";
+import Calendar from "react-calendar";
+import "react-calendar/dist/Calendar.css";
+import moment from "moment";
+import { ChevronLeft, ChevronRight } from "lucide-react";
+
+const weekdays = ["Дав", "Мяг", "Лха", "Пүр", "Баа", "Бям", "Ням"];
+
 
 const items = [
   {
@@ -22,11 +29,34 @@ const items = [
 export default function RentPage() {
   const [loading, setLoading] = useState(false);
   const router = useRouter();
+  const [currentDate, setCurrentDate] = useState(moment()); // Current month & year
+  const [selectedDate, setSelectedDate] = useState(moment()); // Selected date
 
+  
   const handleNavigation = useCallback((id: number) => {
     setLoading(true); // Show loading screen
     router.push(`/product/${id}`);
   }, [router]);
+  const handleMonthChange = (offset: number) => {
+    setCurrentDate((prev) => prev.clone().add(offset, "months"));
+  };
+
+  // Generate calendar days
+  const generateCalendar = () => {
+    const startOfMonth = currentDate.clone().startOf("month");
+    const endOfMonth = currentDate.clone().endOf("month");
+    const startDate = startOfMonth.clone().startOf("week").isoWeekday(1); // Start on Monday
+    const endDate = endOfMonth.clone().endOf("week").isoWeekday(7);
+    const days = [];
+
+    let day = startDate.clone();
+    while (day.isBefore(endDate, "day")) {
+      days.push(day.clone());
+      day.add(1, "day");
+    }
+
+    return days;
+  };
 
   return (
     <div className="max-w-[1200px] mx-auto px-4 py-8">
@@ -76,6 +106,46 @@ export default function RentPage() {
           </div>
         ))}
       </div>
+      <div className="max-w-md mx-auto bg-white p-4 rounded-lg shadow-lg">
+      {/* Calendar Header */}
+      <div className="flex justify-between items-center mb-4">
+        <button onClick={() => handleMonthChange(-1)}>
+          <ChevronLeft className="w-5 h-5 cursor-pointer" />
+        </button>
+        <h3 className="text-lg font-semibold">
+          {currentDate.format("YYYY")} {currentDate.format("M-р сар")}
+        </h3>
+        <button onClick={() => handleMonthChange(1)}>
+          <ChevronRight className="w-5 h-5 cursor-pointer" />
+        </button>
+      </div>
+
+      {/* Weekdays */}
+      <div className="grid grid-cols-7 text-center font-semibold text-gray-700">
+        {weekdays.map((day, index) => (
+          <div key={index} className="py-2">{day}</div>
+        ))}
+      </div>
+
+      {/* Calendar Days */}
+      <div className="grid grid-cols-7 gap-1">
+        {generateCalendar().map((day, index) => (
+          <div
+            key={index}
+            className={`p-2 text-center rounded-md cursor-pointer ${
+              day.month() !== currentDate.month()
+                ? "text-gray-400"
+                : day.isSame(selectedDate, "day")
+                ? "bg-green-500 text-white"
+                : "hover:bg-gray-200"
+            }`}
+            onClick={() => setSelectedDate(day)}
+          >
+            {day.date()}
+          </div>
+        ))}
+      </div>
+    </div>
     </div>
   );
 }

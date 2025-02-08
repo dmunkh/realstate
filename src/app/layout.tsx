@@ -65,7 +65,7 @@ export default function RootLayout({
       <div className="flex items-center">
         <Facebook className="w-5 h-5 text-white mr-2" />
         <a
-          href="https://www.facebook.com/profile.php?id=61568206667360"
+          href="https://www.facebook.com/profile.php?id=61572845470264"
           target="_blank"
           rel="noopener noreferrer"
           className="text-white hover:underline"

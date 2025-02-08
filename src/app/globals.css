@@ -45,3 +45,24 @@ body {
 .menu-link:hover {
   text-decoration: underline;
 }
+.react-calendar__month-view__weekdays {
+  text-transform: capitalize;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+/* Highlight selected day */
+.selected-day {
+  background-color: #4CAF50 !important;
+  color: white !important;
+  border-radius: 50%;
+}
+
+/* Styling calendar container */
+.react-calendar {
+  width: 100%;
+  max-width: 100%;
+  background: white;
+  border: none;
+  font-family: Arial, sans-serif;
+}
