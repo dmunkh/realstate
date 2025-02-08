@@ -78,8 +78,8 @@ const [currentDate, setCurrentDate] = useState(moment()); // Current month & yea
   return (
     <> <Head>
     <title>{product.title}</title>
-    <meta property="og:title" content={product.title} />
-    <meta property="og:description" content={product.description} />
+    <meta property="og:title" content={products.title} />
+    <meta property="og:description" content={products.description} />
     <meta property="og:image" content="https://www.erdenetzuuch.online/img/tanan_01.jpg" />
     <meta property="og:image:secure_url" content="https://www.erdenetzuuch.online/img/tanan_01.jpg" />
     <meta property="og:url" content={fullUrl} />
