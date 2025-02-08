@@ -83,9 +83,12 @@ const Header = () => {
  
     <div className="flex items-center justify-left mx-auto max-w-[1200px] overflow-x-auto space-x-4 p-4  ">
       <MenuItem href="/apartment" src="/img/menu/apartment.png" label="Шинэ орон сууц" />
+      <MenuItem href="/apartment" src="/img/menu/real-state.png" label="Орон сууц, Үл хөдлөх" />
       <MenuItem href="/rent" src="/img/menu/rent.png" label="Хоногоор орон сууц түрээс" />
       <MenuItem href="/rent-house" src="/img/menu/rent1.png" label="Хашаа байшин түрээс" />
       <MenuItem href="/rent-car" src="/img/menu/car.png" label="Автомашин" />
+      <MenuItem href="/rent-car" src="/img/menu/machine.png" label="Машин, механизм" />
+      <MenuItem href="/rent-car" src="/img/menu/stadium.png" label="Спорт заал" />
     </div>
 
   </header>

@@ -40,7 +40,7 @@ export default function RentPage() {
 
       <h1 className="text-xl font-bold flex items-center space-x-2">
         <Image
-          src="/img/menu/apartment.png"
+          src="/img/menu/rent.png"
           alt="Шинэ орон сууц"
           width={32}
           height={32}
