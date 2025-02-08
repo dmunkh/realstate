@@ -3,7 +3,7 @@
 import Image from "next/image";
 import { useState, useCallback } from "react";
 import { useRouter } from "next/navigation";
-import Calendar from "react-calendar";
+
 import "react-calendar/dist/Calendar.css";
 import moment from "moment";
 import { ChevronLeft, ChevronRight } from "lucide-react";
@@ -49,7 +49,7 @@ export default function RentPage() {
     const endDate = endOfMonth.clone().endOf("week").isoWeekday(7);
     const days = [];
 
-    let day = startDate.clone();
+    const day = startDate.clone();
     while (day.isBefore(endDate, "day")) {
       days.push(day.clone());
       day.add(1, "day");
